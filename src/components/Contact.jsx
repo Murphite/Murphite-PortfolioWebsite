@@ -7,10 +7,6 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 
-//template_hmegbnp
-//service_ldca1w6
-//iEUVdeqUUEYHGBoh8
-
 const Contact = () => {
   const formRef = useRef()
   const[form, setForm] = useState({
@@ -31,55 +27,28 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    //  emailjs.send(
-    //   'service_p65h31e', 
-    //  'template_umfq61o',
-    //  {
-    //   from_name: form.name,
-    //   to_name: 'Murphy Ogbeide',
-    //   from_email: form.email,
-    //   to_email: 'ogbeidemurphy@gmail.com',
-    //   message: form.message
-    //  },
-    //  'cbwqwsvnblbsdwbn'
-     
-    //  )
-    //  .then(() => {
-    //   setLoading(false);
-    //   alert('Thank you for your message. I will respond as soon as possible.')
-    //    setForm({
-    //      name: '',
-    //      email: '',
-    //      message: ''
-    //    })
-    //  }, (error) => {
-    //   setLoading(false)
+     emailjs.sendForm(
+      "service_5f8mxa7", 
+     "template_uatcvry",
+     formRef.current,
+     "nYv51g22YNC-rs3oY"         
+     )
+     .then(() => {
+      setLoading(false);
+      alert('Thank you for your message. I will respond as soon as possible.')
+      //  setForm({
+      //    name: '',
+      //    email: '',
+      //    message: ''
+      //  })
+     }, (error) => {
+      setLoading(false)
 
-    //   console.log(error)
+      console.log(error)
 
-    //   alert('Something went wrong')
-    //  })
-     
-    emailjs.send(
-      'service_p65h31e',
-      'template_umfq61o',
-      {
-        from_name: 'Test User',
-        to_name: 'Murphy Ogbeide',
-        from_email: 'test@example.com',
-        to_email: 'ogbeidemurphy@gmail.com',
-        message: 'This is a test message.'
-      },
-      'cbwqwsvnblbsdwbn'
-    )
-    .then(() => {
-      console.log('Email sent successfully');
-    })
-    .catch((error) => {
-      console.error('Error sending email:', error);
-    });
+      alert('Something went wrong')
+     })    
     
-
    }
 
 
@@ -145,17 +114,6 @@ const Contact = () => {
           >
               {loading? 'Sending...' : 'Send'}
           </button>
-
-          {/* <button
-            type="submit"
-            className='bg-tertiary py-3 px-8 outline-none w-fit
-            text-white font-bold shadow-md shadow-primary rounded-xl'
-          >
-            {loading ? 'Sending...' : 'Send'}
-          </button>
-          */}
-
-
 
         </form>
         </motion.div>

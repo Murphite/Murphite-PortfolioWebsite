@@ -45,6 +45,7 @@ import murphy_logo from './murphy_logo.png';
 import cyokeke from './cyokeke.jpeg';
 import francisibe from "./francisibe.jpeg";
 import davidgoriola from './davidgoriola.jpeg';
+import murphypic from  './MurphyDecagonPicture.jpg';
 
 import zblogo from "./company/zblogo.png";
 import nhlogo from "./company/nhlogo.jpg";
@@ -96,5 +97,6 @@ export {
   murphylogo,
   davidgoriola,
   francisibe,
-  cyokeke
+  cyokeke,
+  murphypic
 };
